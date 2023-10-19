@@ -5,7 +5,7 @@ import time
 def get_signal_strength():
     try:
         # Exécute la commande 'netsh wlan show interfaces' pour obtenir les informations sur les interfaces Wi-Fi
-        output = subprocess.check_output(['netsh', 'wlan', 'show', 'interfaces'], encoding='utf-8')
+        output = subprocess.check_output(['netsh', 'wlan', 'show', 'interfaces'], encoding='utf-8')# is used to decode the byte sequence into a string with UTF-8 encoding, making it more human-readable.
         
         # Utilise une expression régulière pour rechercher la puissance du signal
         signal_strength_match = re.search(r'Signal[ ]+: (\d+)%', output)
@@ -21,4 +21,4 @@ def get_signal_strength():
 if __name__ == "__main__":
     while True:
         get_signal_strength()
-        time.sleep(1)  
+        time.sleep(2)  

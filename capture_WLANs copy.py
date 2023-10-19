@@ -41,9 +41,9 @@ def capture_WLAN():
 
 
 
-#while True:
+while True:
 
-#	data=capture_WLAN()	
-#	print(data) 
-#	time.sleep(1)
+	data=capture_WLAN()	
+	print(data) 
+	time.sleep(1)
 	

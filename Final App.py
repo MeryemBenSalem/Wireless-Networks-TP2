@@ -42,6 +42,7 @@ class MainWindow(QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.updateTable)
         self.timer.start(1000)  # Update every 1 second
+        
 
     def updateTable(self):
         m = capture_WLAN()
